@@ -1,0 +1,45 @@
+/*
+Theme Name: custom-theme
+Theme URI: http://www.yourdomain.com/
+Author: You
+Author URI: http://www.yourdomain.com/
+Description: Your Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: custom-theme-domain
+Tags: Your Tags
+*/
+
+/**
+ Import your variables/animations
+ */
+@import "variables";
+@import "animations";
+
+/**
+ Import global styles
+ */
+@import "wordpressStyles";
+@import "global";
+
+/**
+ Import your components
+ */
+@import "components/top-runner";
+@import "components/masthead";
+@import "components/slider";
+@import "components/runner-bar";
+@import "components/about-us";
+@import "components/quote";
+@import "components/header";
+@import "components/widgets";
+@import "components/projects";
+@import "components/colophon";
+
+/**
+ Import your pages
+ */
+@import "pages/services";
+@import "pages/clients";
+@import "pages/contact";

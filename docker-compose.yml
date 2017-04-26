@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+
+  wordpress:
+    image: wordpress
+    restart: always
+    volumes:
+      - ./custom-theme:/var/www/html/wp-content/themes/custom-theme
+      - ./uploads:/var/www/html/wp-content/uploads
+      - ./plugins:/var/www/html/wp-content/plugins
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_PASSWORD: your_db_password
+
+  mysql:
+    image: mariadb
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: your_db_password
+    volumes:
+      - your_wordpress_db_data:/var/lib/mysql
+
+volumes:
+    your_wordpress_db_data:
